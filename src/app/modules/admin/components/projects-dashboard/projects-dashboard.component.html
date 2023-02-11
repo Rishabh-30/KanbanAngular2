@@ -1,0 +1,19 @@
+<mat-card style="width: 800px;height:75px;  margin-left:10%;margin-top: 3.6% ;">
+    <mat-card-title>
+        <mat-icon>apps</mat-icon>&nbsp;
+         Welcome to Kanban Tool!</mat-card-title>
+  </mat-card>
+
+  <mat-card *ngFor="let e of projects | paginate : { itemsPerPage:5 , currentPage:p }"  style="width: 800px;height:75px;  margin-left:10%;margin-top: 2% ;">
+    
+    <mat-card-title>
+        <mat-icon >apps</mat-icon>&nbsp;
+            <a mat-list-item (click)="getBgImg(e)" style="text-decoration: none; color:black;" >{{e.projectName}}</a>
+      
+    </mat-card-title>
+    <mat-card-actions align="end">
+        <button mat-raised-button color="primary" style="margin-top:-45px;" (click)="onClickEdit(e)"><mat-icon style="font-size: 26px;">edit</mat-icon></button>
+      <button mat-raised-button color="primary" style="margin-top:-45px;" (click)="onClickDelete(e.projectName)"><mat-icon style="font-size: 25px;">delete</mat-icon></button>
+    </mat-card-actions>
+  </mat-card><br>
+  <pagination-controls (pageChange)="p = $event" style="float:right;"></pagination-controls>

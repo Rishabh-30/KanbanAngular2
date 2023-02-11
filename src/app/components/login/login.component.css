@@ -1,0 +1,115 @@
+/* *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    
+} */
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .danger{
+    color: red;
+  }
+body{
+    background-image: url(src\assets\login1.jpg);
+}
+.contentBx
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
+}
+ .contentBx .formBx
+{
+        margin-right: -750px;
+        margin-top: 10px;
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border-radius: 10px;
+        padding: 40px;
+        box-sizing: border-box;
+        background: #80bfef76;
+        box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px rgb(143, 139, 139);
+      
+}
+ .contentBx .formBx h2
+{
+    color: #1a1b1c;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #897622;
+    display: inline-block;
+    letter-spacing: 1px;
+
+}
+.contentBx .formBx .inputBx
+{
+    margin-bottom: 20px;
+}
+ .contentBx .formBx .inputBx span
+{
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #0d0d0d;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.contentBx .formBx .inputBx input
+{
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border:1px solid #607d8b;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #171818;
+  background: transparent;
+  border-radius: 30px;
+
+}
+.contentBx .formBx .inputBx input[type="submit"]
+{
+    background: #5a96e9;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+
+
+}
+.contentBx .formBx .inputBx input[type="submit"]:hover
+{
+background: #1424d4;
+}
+ .contentBx .formBx .remember
+{
+  margin-bottom: 10px;
+  color: #607d8b;
+  font-weight: 400;
+  font-size: 14px;
+}
+ .contentBx .formBx .remember a{
+    color: #0d0d0d;
+}
+.contentBx .formBx .inputBx p
+{
+ color:#1a9ddf;
+}
+ .contentBx .formBx .inputBx p a
+{
+    color: #111111;
+}

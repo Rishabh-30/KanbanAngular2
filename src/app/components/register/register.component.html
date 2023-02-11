@@ -1,0 +1,55 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+            <span style="margin-left: 20px;"><a style="font-size: x-large;" mat-icon-button routerLink="/">Kanban Board</a></span>
+            <span class="example-spacer"></span>
+            <button routerLink="../login" style="margin-left: 20px;"  mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>login</mat-icon>
+              </button>
+    </mat-toolbar-row>
+</mat-toolbar> 
+<body class="bg-img">
+    <mat-card-content>
+    <div >
+        <div class="content">
+            <header>Register Here </header>
+            <form name="registerForm" [formGroup]="registerForm" action="">
+                
+                <div class="field">
+                    <input style="color: black;" type="text" required placeholder="Username" formControlName="userName">
+                </div>
+                <mat-error class="danger" *ngIf="registerForm.controls['userName'].dirty && registerForm.hasError('required','userName')">*User Name is required</mat-error>
+                <br>
+                 <div class="field">
+                    <input style="color: black;" type="email" matInput required placeholder="Email" formControlName="userEmail">
+                 </div>
+                 <mat-error class="danger" *ngIf="registerForm.controls['userEmail'].dirty && registerForm.hasError('required','userEmail')">*User email is required</mat-error>
+                 
+                <div class="field space">
+                    <input style="color: black;" type="password" required placeholder="Password" formControlName="password">
+                </div>
+                <mat-error class="danger" *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required','password')">*Password is required</mat-error>
+                <div class="field space">
+                    <input style="color: black;" type="password" required placeholder="Confirm Password" formControlName="confirm_password"> 
+                </div>
+                <mat-error class="danger" *ngIf="registerForm.controls['confirm_password'].dirty && registerForm.hasError('required','confirm_password')">*Confirm_password is required</mat-error>
+                
+                <br><br>
+               
+                <div >
+                    <button class="field1" type="submit"  [disabled]="!(registerForm.value.password==registerForm.value.confirm_password ) || registerForm.invalid" (click)="submit()" >REGISTER</button>
+                  
+                </div>
+                
+                <br>
+                <div class="signup">Already have an account?
+                    <a href="login">LogIn Now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+        </mat-card-content>
+   <!-- // </mat-card>  -->
+<!-- </mat-sidenav-content>
+</mat-sidenav-container> -->
+        
+    

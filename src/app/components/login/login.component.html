@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+    <span style="margin-left: 20px;"><a style="font-size: x-large;" mat-icon-button routerLink="/">Kanban Board</a></span>
+    <span class="example-spacer"></span>
+    <button routerLink="../home-page" style="margin-left: 20px;"  mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>home</mat-icon>
+      </button>
+</mat-toolbar>
+ <body>
+        <div class="contentBx" style="height: 100%;">
+            <div class="formBx">
+                <h2>Sign In</h2>
+                <form name="loginForm" [formGroup]="loginForm">
+                    <div class="inputBx">
+                        <span>Email</span>
+                        <input type="text" matInput required formControlName="userEmail">
+                    </div>
+                    <mat-error class="danger" *ngIf="loginForm.controls['userEmail'].dirty && loginForm.hasError('required','userEmail')">*User email is required</mat-error>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" matInput required formControlName="password">
+                    </div>
+                    <mat-error class="danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</mat-error>
+                    <div class="remember">
+                        <p><a href="../forgot-password">Forgot password?</a></p>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Sign in" (click)="onLogin()">
+                    </div>
+                    <div class="inputBx">
+                        <p>Don't have an account?<a href="register">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+ </body>
